@@ -1,0 +1,23 @@
+hl.config({
+    input = {
+        kb_layout    = "us,br",
+        kb_variant   = "",
+        kb_model     = "pc105",
+        kb_options   = "grp:alt_shift_toggle",
+        kb_rules     = "evdev",
+        follow_mouse = 1,
+        sensitivity  = 0,
+        touchpad = {
+            natural_scroll = true,
+        },
+    },
+    cursor = {
+        inactive_timeout = 2,
+    },
+})
+
+hl.gesture({
+    fingers   = 3,
+    direction = "horizontal",
+    action    = "workspace",
+})
