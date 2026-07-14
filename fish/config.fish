@@ -3,7 +3,7 @@ function fish_prompt
 
     set_color normal
     printf '%s@' $USER
-    set_color -o brgreen
+    set_color -o green
     printf '%s ' $hostname
     
     set_color normal
@@ -35,6 +35,8 @@ set --erase _asdf_shims
 set -g fish_greeting
 set -g fish_autosuggestion_enabled 0
 set -g fish_prompt_pwd_dir_length 0
+
+fastfetch
 
 alias ...="cd ../.."
 alias ....="cd ../../.."
