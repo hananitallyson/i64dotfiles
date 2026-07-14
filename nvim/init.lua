@@ -1,9 +1,7 @@
-package.path = package.path
-    .. ";" .. vim.fn.stdpath("config") .. "/config/?.lua"
-    .. ";" .. vim.fn.stdpath("config") .. "/config/?/init.lua"
+local config_path = vim.fn.stdpath("config") .. "/config"
+package.path = config_path .. "/?.lua;" .. config_path .. "/?/init.lua;" .. package.path
 
-require("settings.options")
 require("settings.plugins")
+require("settings.options")
+require("settings.colors")
 require("settings.keymaps")
-require("themes.asimov").setup()
-

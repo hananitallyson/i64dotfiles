@@ -1,73 +1,25 @@
-vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" })
+vim.pack.add({
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/nvim-lualine/lualine.nvim'
+})
 
-local lualine = require("lualine")
+require('nvim-web-devicons').setup()
 
-local base = {
-	a = { fg = "#0a0a0a", bg = "#e8e8e8", gui = "bold" },
-	b = { fg = "#808080", bg = "#0a0a0a", gui = "bold" },
-	c = { fg = "#e8e8e8", bg = "#0a0a0a", gui = "bold" },
-	x = { fg = "#e8e8e8", bg = "#0a0a0a", gui = "bold" },
-	y = { fg = "#e8e8e8", bg = "#0a0a0a", gui = "bold" },
-	z = { fg = "#e8e8e8", bg = "#0a0a0a", gui = "bold" },
-}
+local asimov = require("settings.colors")
 
-local theme = {
-	normal = base,
-	insert = base,
-	visual = base,
-	replace = base,
-	inactive = base,
-}
-
-lualine.setup({
-	options = {
-		theme = theme,
-		component_separators = "",
-		section_separators = { left = "", right = "" },
-		globalstatus = true,
-	},
-
-	sections = {
-		lualine_a = { { "mode", upper = true } },
-
-		lualine_b = {
-			{ "branch", icon = "" },
-			{ "diff" },
-		},
-
-		lualine_c = {
-			{ "filename", path = 0, symbols = { modified = "[+]", readonly = "[-]", unnamed = "[No Name]" } },
-			{ "filesize" },
-		},
-
-		lualine_x = {
-			{ "diagnostics" },
-			{ "searchcount" },
-			{ "encoding" },
-			{ "fileformat" },
-			{ "filetype" },
-		},
-
-		lualine_y = {
-			{ "progress" },
-		},
-
-		lualine_z = {
-			{ "location" },
-			{
-				function()
-					return vim.fn.line("$")
-				end,
-			},
-		},
-	},
-
-	inactive_sections = {
-		lualine_a = {},
-		lualine_b = {},
-		lualine_c = { { "filename", path = 1 } },
-		lualine_x = { { "location" } },
-		lualine_y = {},
-		lualine_z = {},
-	},
+require('lualine').setup({
+  options = {
+    theme = asimov.lualine,
+    component_separators = '',
+    section_separators = '',
+    globalstatus = true,
+  },
+  sections = {
+    lualine_a = { 'mode' },
+    lualine_b = { 'filename' },
+    lualine_c = { 'diff' },
+    lualine_x = { 'filetype' },
+    lualine_y = { 'encoding' },
+    lualine_z = { 'location' },
+  },
 })

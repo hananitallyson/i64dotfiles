@@ -5,4 +5,4 @@ vim.pack.add({
 	},
 })
 
-require("harpoon"):setup()
+require("harpoon").setup()

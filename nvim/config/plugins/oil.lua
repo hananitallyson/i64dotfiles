@@ -1,4 +1,6 @@
-vim.pack.add({ "https://github.com/stevearc/oil.nvim" })
+vim.pack.add({
+    'https://github.com/stevearc/oil.nvim',
+})
 
 require("oil").setup({
 	default_file_explorer = true,
@@ -8,11 +10,4 @@ require("oil").setup({
 	view_options = {
 		show_hidden = true,
 	},
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "oil",
-	callback = function()
-		vim.wo.winbar = string.format("%3s %-9s %-2s %-12s %s", " ", "PERM", "SIZE", "MTIME", "NAME")
-	end,
 })
