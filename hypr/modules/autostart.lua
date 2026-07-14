@@ -1,4 +1,6 @@
 hl.on("hyprland.start", function () 
   hl.exec_cmd("waybar")
   hl.exec_cmd("hyprctl setcursor macOS-White 32")
+  hl.exec_cmd("wl-paste --watch cliphist store")
+  hl.exec_cmd("rm '$HOME/.cache/cliphist/db'")
 end)
