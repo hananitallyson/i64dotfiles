@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-family: "Liga SFMonoNerdFont", monospace;
     font-size: 16px;
     font-weight: bold;
     min-height: 0;
@@ -66,11 +66,11 @@ window#waybar.hidden {
 #workspaces button.active,
 #network.ethernet,
 #custom-hostname {
-    color: #6ee79c;
+    color: #4ebc77;
 }
 
 #workspaces button.active {
-    color: #6ee79c;
+    color: #4ebc77;
     background-color: #111111;
 }
 
