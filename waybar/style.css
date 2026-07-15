@@ -44,6 +44,10 @@ window#waybar.hidden {
     background-color: #3a3a3a;
 }
 
+#window {
+    margin: 0 0 0 15px;
+}
+
 #clock,
 #language,
 #pulseaudio,
@@ -71,6 +75,6 @@ window#waybar.hidden {
 
 #workspaces button.active {
     color: #4ebc77;
-    background-color: #111111;
+    background-color: #101010;
 }
 
