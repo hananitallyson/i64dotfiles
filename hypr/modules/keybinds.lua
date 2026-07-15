@@ -4,16 +4,14 @@ local fileManager = "thunar"
 local menu = "tofi-drun --drun-launch=true"
 local clipboard = "cliphist list | tofi | cliphist decode | wl-copy"
 local reload = "hyprctl reload && pkill waybar && waybar &"
+local power = "~/.config/hypr/scripts/power.sh"
 
 hl.bind(MOD .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(MOD .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(MOD .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(MOD .. " + V", hl.dsp.exec_cmd(clipboard))
 hl.bind(MOD .. " + R", hl.dsp.exec_cmd(reload))
-hl.bind(
-    MOD .. " + M",
-    hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
+hl.bind(MOD .. " + Escape", hl.dsp.exec_cmd(power))
 
 hl.bind(MOD .. " + Q", hl.dsp.window.close())
 hl.bind(MOD .. " + W", hl.dsp.window.float({ action = "toggle" }))
