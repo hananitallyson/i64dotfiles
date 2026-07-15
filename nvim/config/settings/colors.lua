@@ -9,6 +9,7 @@ local none = "NONE"
 
 local c = {
   bg          = none,
+  alt_bg      = "#101010",
   fg          = "#d7dae0",
   red         = "#ff5f70",
   dark_red    = "#ff3b5c",
@@ -44,7 +45,7 @@ hi("EndOfBuffer",   { fg = c.bg })
 hi("Terminal",      { fg = c.fg })
 
 hi("Cursor",        { fg = c.black, bg = c.fg })
-hi("CursorLine",    { bg = c.bg })
+hi("CursorLine",    { bg = c.alt_bg })
 hi("CursorLineNr",  { fg = c.white, bold = true })
 hi("CursorColumn",  { bg = c.bg })
 hi("ColorColumn",   { bg = c.bg })
