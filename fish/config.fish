@@ -35,3 +35,4 @@ set --erase _asdf_shims
 set -g fish_greeting
 set -g fish_autosuggestion_enabled 0
 set -g fish_prompt_pwd_dir_length 0
+set -Ux LS_COLORS "di=34:ex=32"
