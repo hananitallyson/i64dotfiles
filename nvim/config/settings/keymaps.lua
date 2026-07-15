@@ -10,4 +10,3 @@ vim.keymap.set("n", "<C-t>", "actions.select tab=true", { desc = "Tab" })
 
 vim.keymap.set("n", "p", "actions.preview", { desc = "Preview" })
 vim.keymap.set("n", "q", "actions.close", { desc = "Close" })
-vim.keymap.set("n", "?", "actions.show_help", { desc = "Help" })
