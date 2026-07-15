@@ -23,7 +23,7 @@ local c = {
   black       = "#282c34",
   grey        = "#6c7280",
   light_grey  = "#98a1b3",
-  visual_grey = "#3e4452",
+  visual_grey = "#101010",
   cursor_grey = "#2c323c",
   menu_grey   = "#3e4452",
   special_grey= "#3b4048",
@@ -45,7 +45,7 @@ hi("EndOfBuffer",   { fg = c.bg })
 hi("Terminal",      { fg = c.fg })
 
 hi("Cursor",        { fg = c.black, bg = c.fg })
-hi("CursorLine",    { bg = c.alt_bg })
+hi("CursorLine",    { bg = c.bg })
 hi("CursorLineNr",  { fg = c.white, bold = true })
 hi("CursorColumn",  { bg = c.bg })
 hi("ColorColumn",   { bg = c.bg })
