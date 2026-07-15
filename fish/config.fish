@@ -3,7 +3,7 @@ function fish_prompt
 
     set_color normal
     printf '%s@' $USER
-    set_color -o green
+    set_color green
     printf '%s ' $hostname
     
     set_color normal
