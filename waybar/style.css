@@ -69,6 +69,7 @@ window#waybar.hidden {
 
 #workspaces button.active,
 #network.ethernet,
+#network.wifi,
 #custom-hostname {
     color: #4ebc77;
 }
