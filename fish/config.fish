@@ -26,21 +26,6 @@ function fish_prompt
     printf '$ '
 end
 
-function gcco
-    set -l outfile (basename $argv[1] .c)
-    gcc $argv[1] -o $outfile
-end
-
-function gccs
-    set -l outfile (basename $argv[1] .c)
-    gcc -S $argv[1] -o $outfile.s
-end
-
-function gccc
-    set -l outfile (basename $argv[1] .c)
-    gcc -c $argv[1] -o $outfile.o
-end
-
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 set -q ASDF_DATA_DIR; or set -gx ASDF_DATA_DIR "$HOME/.asdf"
 if not contains "$ASDF_DATA_DIR/shims" $PATH
