@@ -17,7 +17,7 @@ local c = {
   yellow      = "#ffcb52",
   dark_yellow = "#ffa146",
   blue        = "#00bbff",
-  purple      = "#d573ff",
+  purple      = "#bf68d9",
   cyan        = "#3ce0d0",
   white       = "#e6e9f0",
   black       = "#282c34",
@@ -251,27 +251,27 @@ hi("NvimTreeGitDeleted",   { fg = c.red })
 
 local lualine_theme = {
   normal = {
-    a = { fg = c.alt_bg, bg = c.white },
+    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   insert = {
-    a = { fg = c.alt_bg, bg = c.white },
+    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   visual = {
-    a = { fg = c.alt_bg, bg = c.white },
+    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   replace = {
-    a = { fg = c.alt_bg, bg = c.white },
+    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   command = {
-    a = { fg = c.alt_bg, bg = c.white },
+    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
