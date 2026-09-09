@@ -1,0 +1,45 @@
+[global]
+    monitor = 0
+    follow = keyboard
+
+    width = (300, 500)
+    height = (0, 200)
+    offset = (0, 0)
+    origin = top-center
+    corner_radius = 0
+
+    frame_width = 2
+    frame_color = "#ffffff"
+    separator_height = 2
+    separator_color = frame
+    padding = 10
+    horizontal_padding = 12
+
+    font = Ioskeley Mono NL 10
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+    icon_theme = Papirus-Dark
+
+[urgency_low]
+    background = "#000000"
+    foreground = "#f1e9d2"
+    frame_color = "#ffffff"
+    timeout = 5
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#f1e9d2"
+    frame_color = "#00ff66"
+    timeout = 7
+
+[urgency_critical]
+    background = "#000000"
+    foreground = "#f1e9d2"
+    frame_color = "#ff0055"
+    timeout = 0
