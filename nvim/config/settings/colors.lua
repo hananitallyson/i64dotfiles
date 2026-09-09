@@ -8,15 +8,15 @@ vim.g.colors_name = "asimov"
 local none = "NONE"
 
 local c = {
-  bg          = none,
+  bg           = none,
   alt_bg      = "#101010",
   fg          = "#d7dae0",
   red         = "#ff5f70",
   dark_red    = "#ff3b5c",
-  green       = "#5fdb7a",
+  green       = "#00ff66",
   yellow      = "#ffcb52",
   dark_yellow = "#ffa146",
-  blue        = "#3fbfff",
+  blue        = "#00bbff",
   purple      = "#d573ff",
   cyan        = "#3ce0d0",
   white       = "#e6e9f0",
@@ -28,7 +28,7 @@ local c = {
   menu_grey   = "#3e4452",
   special_grey= "#3b4048",
   vertsplit   = "#3e4452",
-  folder_green= "#4ebc77",
+  folder_green= "#00ff66",
 }
 
 local function hi(group, opts)
@@ -40,23 +40,23 @@ hi("Normal",        { fg = c.fg })
 hi("NormalFloat",   { fg = c.fg })
 hi("NormalNC",      { fg = c.fg })
 hi("FloatBorder",   { fg = c.grey })
-hi("FloatTitle",    { fg = c.blue, bold = true })
+hi("FloatTitle",    { fg = c.blue })
 hi("EndOfBuffer",   { fg = c.bg })
 hi("Terminal",      { fg = c.fg })
 
 hi("Cursor",        { fg = c.black, bg = c.fg })
 hi("CursorLine",    { bg = c.bg })
-hi("CursorLineNr",  { fg = c.white, bold = true })
+hi("CursorLineNr",  { fg = c.white })
 hi("CursorColumn",  { bg = c.bg })
 hi("ColorColumn",   { bg = c.bg })
 
 hi("LineNr",        { fg = c.grey })
 hi("SignColumn",    { fg = c.fg })
 hi("FoldColumn",    { fg = c.fg })
-hi("Folded",         { fg = c.grey, italic = true })
+hi("Folded",        { fg = c.grey })
 
-hi("VertSplit",      { fg = c.vertsplit })
-hi("WinSeparator",   { fg = c.vertsplit })
+hi("VertSplit",     { fg = c.vertsplit })
+hi("WinSeparator",  { fg = c.vertsplit })
 
 hi("Pmenu",           { fg = c.fg })
 hi("PmenuSel",        { fg = c.black, bg = c.blue })
@@ -68,7 +68,7 @@ hi("StatusLine",      { fg = c.fg })
 hi("StatusLineNC",    { fg = c.grey })
 hi("TabLine",         { fg = c.grey })
 hi("TabLineFill",     { fg = c.grey })
-hi("TabLineSel",      { fg = c.white, bold = true })
+hi("TabLineSel",      { fg = c.white })
 
 hi("Visual",          { bg = c.visual_grey })
 hi("VisualNOS",       { bg = c.visual_grey })
@@ -76,23 +76,23 @@ hi("Search",          { fg = c.black, bg = c.yellow })
 hi("IncSearch",       { fg = c.black, bg = c.dark_yellow })
 hi("CurSearch",       { fg = c.black, bg = c.dark_yellow })
 
-hi("MatchParen",      { fg = c.blue, bold = true })
+hi("MatchParen",      { fg = c.blue })
 hi("Directory",       { fg = c.folder_green })
-hi("Title",           { fg = c.green, bold = true })
+hi("Title",           { fg = c.green })
 
-hi("ErrorMsg",        { fg = c.red, bold = true })
-hi("WarningMsg",       { fg = c.yellow, bold = true })
-hi("MoreMsg",          { fg = c.blue })
-hi("Question",         { fg = c.blue })
-hi("ModeMsg",          { fg = c.fg })
+hi("ErrorMsg",        { fg = c.red })
+hi("WarningMsg",      { fg = c.yellow })
+hi("MoreMsg",         { fg = c.blue })
+hi("Question",        { fg = c.blue })
+hi("ModeMsg",         { fg = c.fg })
 
-hi("NonText",          { fg = c.grey })
-hi("SpecialKey",       { fg = c.grey })
-hi("Whitespace",       { fg = c.grey })
-hi("Conceal",          { fg = c.grey })
+hi("NonText",         { fg = c.grey })
+hi("SpecialKey",      { fg = c.grey })
+hi("Whitespace",      { fg = c.grey })
+hi("Conceal",         { fg = c.grey })
 
-hi("Substitute",       { fg = c.black, bg = c.yellow })
-hi("QuickFixLine",     { bg = c.visual_grey })
+hi("Substitute",      { fg = c.black, bg = c.yellow })
+hi("QuickFixLine",    { bg = c.visual_grey })
 
 hi("SpellBad",    { sp = c.red,    undercurl = true })
 hi("SpellCap",    { sp = c.yellow, undercurl = true })
@@ -104,7 +104,7 @@ hi("DiffChange",  { fg = c.yellow })
 hi("DiffDelete",  { fg = c.red })
 hi("DiffText",    { fg = c.blue })
 
-hi("Comment",       { fg = c.grey, italic = true })
+hi("Comment",       { fg = c.grey })
 
 hi("Constant",      { fg = c.dark_yellow })
 hi("String",        { fg = c.green })
@@ -145,7 +145,7 @@ hi("Debug",         { fg = c.red })
 hi("Underlined",    { fg = c.blue, underline = true })
 hi("Ignore",        { fg = c.grey })
 hi("Error",         { fg = c.red })
-hi("Todo",          { fg = c.purple, bold = true })
+hi("Todo",          { fg = c.purple })
 
 hi("DiagnosticError", { fg = c.red })
 hi("DiagnosticWarn",  { fg = c.yellow })
@@ -167,7 +167,7 @@ hi("LspReferenceText",  { bg = c.visual_grey })
 hi("LspReferenceRead",  { bg = c.visual_grey })
 hi("LspReferenceWrite", { bg = c.visual_grey })
 hi("LspCodeLens",       { fg = c.grey })
-hi("LspInlayHint",      { fg = c.grey, italic = true })
+hi("LspInlayHint",      { fg = c.grey })
 
 hi("@variable",              { fg = c.fg })
 hi("@variable.builtin",      { fg = c.red })
@@ -198,10 +198,10 @@ hi("@function.method",         { fg = c.blue })
 hi("@constructor",             { fg = c.yellow })
 hi("@parameter",               { fg = c.red })
 
-hi("@keyword",                 { fg = c.purple, italic = true })
-hi("@keyword.function",        { fg = c.purple, italic = true })
+hi("@keyword",                 { fg = c.purple })
+hi("@keyword.function",        { fg = c.purple })
 hi("@keyword.operator",        { fg = c.purple })
-hi("@keyword.return",          { fg = c.purple, italic = true })
+hi("@keyword.return",          { fg = c.purple })
 hi("@conditional",             { fg = c.purple })
 hi("@repeat",                  { fg = c.purple })
 hi("@exception",               { fg = c.purple })
@@ -215,15 +215,15 @@ hi("@punctuation.delimiter",   { fg = c.light_grey })
 hi("@punctuation.bracket",     { fg = c.fg })
 hi("@punctuation.special",     { fg = c.blue })
 
-hi("@comment",                 { fg = c.grey, italic = true })
-hi("@comment.documentation",   { fg = c.grey, italic = true })
+hi("@comment",                 { fg = c.grey })
+hi("@comment.documentation",   { fg = c.grey })
 hi("@tag",                     { fg = c.red })
 hi("@tag.attribute",           { fg = c.dark_yellow })
 hi("@tag.delimiter",           { fg = c.light_grey })
 
-hi("@markup.heading",          { fg = c.blue, bold = true })
-hi("@markup.strong",           { bold = true })
-hi("@markup.italic",           { italic = true })
+hi("@markup.heading",          { fg = c.blue })
+hi("@markup.strong",           {})
+hi("@markup.italic",           {})
 hi("@markup.link",             { fg = c.cyan, underline = true })
 
 hi("GitSignsAdd",    { fg = c.green })
@@ -236,14 +236,14 @@ hi("TelescopePromptBorder",  { fg = c.grey })
 hi("TelescopeResultsBorder", { fg = c.grey })
 hi("TelescopePreviewBorder", { fg = c.grey })
 hi("TelescopeSelection",     { bg = c.visual_grey })
-hi("TelescopeMatching",      { fg = c.blue, bold = true })
+hi("TelescopeMatching",      { fg = c.blue })
 
 hi("NvimTreeNormal",       { fg = c.fg })
 hi("NvimTreeFolderIcon",   { fg = c.folder_green })
 hi("NvimTreeFolderName",   { fg = c.folder_green })
-hi("NvimTreeOpenedFolderName", { fg = c.folder_green, bold = true })
+hi("NvimTreeOpenedFolderName", { fg = c.folder_green })
 hi("NvimTreeEmptyFolderName", { fg = c.folder_green })
-hi("NvimTreeRootFolder",   { fg = c.folder_green, bold = true })
+hi("NvimTreeRootFolder",   { fg = c.folder_green })
 hi("NvimTreeIndentMarker", { fg = c.grey })
 hi("NvimTreeGitDirty",     { fg = c.yellow })
 hi("NvimTreeGitNew",       { fg = c.green })
@@ -251,27 +251,27 @@ hi("NvimTreeGitDeleted",   { fg = c.red })
 
 local lualine_theme = {
   normal = {
-    a = { fg = c.alt_bg, bg = c.white,   gui = "bold" },
+    a = { fg = c.alt_bg, bg = c.white },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   insert = {
-    a = { fg = c.alt_bg, bg = c.white,  gui = "bold" },
+    a = { fg = c.alt_bg, bg = c.white },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   visual = {
-    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
+    a = { fg = c.alt_bg, bg = c.white },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   replace = {
-    a = { fg = c.alt_bg, bg = c.white,    gui = "bold" },
+    a = { fg = c.alt_bg, bg = c.white },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
   command = {
-    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
+    a = { fg = c.alt_bg, bg = c.white },
     b = { fg = c.fg,     bg = "NONE" },
     c = { fg = c.fg,     bg = "NONE" },
   },
