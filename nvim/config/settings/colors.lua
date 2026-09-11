@@ -10,7 +10,7 @@ local none = "NONE"
 local c = {
   bg           = none,
   alt_bg      = "#101010",
-  fg          = "#d7dae0",
+  fg          = "#ffffff",
   red         = "#ff5f70",
   dark_red    = "#ff3b5c",
   green       = "#00ff66",
@@ -40,7 +40,7 @@ hi("Normal",        { fg = c.fg })
 hi("NormalFloat",   { fg = c.fg })
 hi("NormalNC",      { fg = c.fg })
 hi("FloatBorder",   { fg = c.grey })
-hi("FloatTitle",    { fg = c.blue })
+hi("FloatTitle",    { fg = c.green })
 hi("EndOfBuffer",   { fg = c.bg })
 hi("Terminal",      { fg = c.fg })
 
