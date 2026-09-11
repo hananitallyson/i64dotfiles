@@ -2,7 +2,9 @@ local telescope = require("telescope.builtin")
 
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result" })
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
+
 vim.keymap.set("n", "<leader>ff", telescope.find_files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>fa", function() telescope.find_files({ follow = true, no_ignore = true, hidden = true }) end, { desc = "Find all files" })
 vim.keymap.set("n", "<leader>fg", telescope.live_grep, { desc = "Live grep" })
