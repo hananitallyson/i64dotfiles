@@ -3,6 +3,7 @@ local terminal = "kitty"
 local fileManager = "thunar"
 local menu = "tofi-drun --drun-launch=true"
 local clipboard = "cliphist list | tofi | cliphist decode | wl-copy"
+local record = "~/.config/hypr/scripts/record.sh"
 local reload = "hyprctl reload && pkill waybar && waybar &"
 local power = "~/.config/hypr/scripts/power.sh"
 local screenshot = "~/.config/hypr/scripts/screenshot.sh"
@@ -11,6 +12,7 @@ hl.bind(MOD .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(MOD .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(MOD .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(MOD .. " + V", hl.dsp.exec_cmd(clipboard))
+hl.bind(MOD .. " + SHIFT + R", hl.dsp.exec_cmd(record))
 hl.bind(MOD .. " + R", hl.dsp.exec_cmd(reload))
 hl.bind(MOD .. " + SHIFT + P", hl.dsp.exec_cmd(screenshot))
 hl.bind(MOD .. " + Escape", hl.dsp.exec_cmd(power))
