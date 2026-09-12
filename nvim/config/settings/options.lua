@@ -3,11 +3,15 @@ vim.g.mapleader = " "
 vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.numberwidth = 4
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
+vim.opt.showcmd = false
+
+vim.opt.statuscolumn = "%s%=%{v:relnum == 0 ? v:lnum : v:relnum} "
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4

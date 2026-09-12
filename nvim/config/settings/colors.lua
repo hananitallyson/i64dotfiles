@@ -8,7 +8,8 @@ vim.g.colors_name = "asimov"
 local none = "NONE"
 
 local c = {
-  bg           = none,
+  bg          = none,
+  sub_bg      = "#080910",
   alt_bg      = "#101010",
   fg          = "#ffffff",
   red         = "#ff5f70",
@@ -264,36 +265,22 @@ hi("NvimTreeGitDirty",     { fg = c.yellow })
 hi("NvimTreeGitNew",       { fg = c.green })
 hi("NvimTreeGitDeleted",   { fg = c.red })
 
+local base_style = {
+  a = { fg = c.white, bg = c.sub_bg, gui = "bold" },
+  b = { fg = c.fg,    bg = c.sub_bg },
+  c = { fg = c.fg,    bg = c.sub_bg },
+}
+
 local lualine_theme = {
-  normal = {
-    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
-    b = { fg = c.fg,     bg = "NONE" },
-    c = { fg = c.fg,     bg = "NONE" },
-  },
-  insert = {
-    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
-    b = { fg = c.fg,     bg = "NONE" },
-    c = { fg = c.fg,     bg = "NONE" },
-  },
-  visual = {
-    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
-    b = { fg = c.fg,     bg = "NONE" },
-    c = { fg = c.fg,     bg = "NONE" },
-  },
-  replace = {
-    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
-    b = { fg = c.fg,     bg = "NONE" },
-    c = { fg = c.fg,     bg = "NONE" },
-  },
-  command = {
-    a = { fg = c.alt_bg, bg = c.white, gui = "bold" },
-    b = { fg = c.fg,     bg = "NONE" },
-    c = { fg = c.fg,     bg = "NONE" },
-  },
+  normal   = base_style,
+  insert   = base_style,
+  visual   = base_style,
+  replace  = base_style,
+  command  = base_style,
   inactive = {
-    a = { fg = c.grey, bg = "NONE" },
-    b = { fg = c.grey, bg = "NONE" },
-    c = { fg = c.grey, bg = "NONE" },
+    a = { fg = c.grey, bg = c.sub_bg },
+    b = { fg = c.grey, bg = c.sub_bg },
+    c = { fg = c.grey, bg = c.sub_bg },
   },
 }
 
