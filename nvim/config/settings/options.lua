@@ -30,3 +30,5 @@ vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.list = true
+vim.opt.listchars = { space = '·', tab = '· ', trail = '·', nbsp = '␣' }

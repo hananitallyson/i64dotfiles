@@ -23,6 +23,7 @@ local c = {
   white       = "#e6e9f0",
   black       = "#282c34",
   grey        = "#6c7280",
+  dark_grey   = "#131313",
   light_grey  = "#98a1b3",
   visual_grey = "#101010",
   cursor_grey = "#2c323c",
@@ -99,10 +100,10 @@ hi("MoreMsg",         { fg = c.blue })
 hi("Question",        { fg = c.blue })
 hi("ModeMsg",         { fg = c.fg })
 
-hi("NonText",         { fg = c.grey })
-hi("SpecialKey",      { fg = c.grey })
-hi("Whitespace",      { fg = c.grey })
-hi("Conceal",         { fg = c.grey })
+hi("NonText",         { fg = c.dark_grey })
+hi("SpecialKey",      { fg = c.dark_grey })
+hi("Whitespace",      { fg = c.dark_grey })
+hi("Conceal",         { fg = c.dark_grey })
 
 hi("Substitute",      { fg = c.black, bg = c.yellow })
 hi("QuickFixLine",    { bg = c.visual_grey })
@@ -291,9 +292,9 @@ hi("NvimTreeGitNew",       { fg = c.green })
 hi("NvimTreeGitDeleted",   { fg = c.red })
 
 local base_style = {
-  a = { fg = c.white, bg = c.sub_bg, gui = "bold" },
-  b = { fg = c.fg,    bg = c.sub_bg },
-  c = { fg = c.fg,    bg = c.sub_bg },
+  a = { fg = c.white, bg = c.bg, gui = "bold" },
+  b = { fg = c.fg,    bg = c.bg },
+  c = { fg = c.fg,    bg = c.bg },
 }
 
 local lualine_theme = {
@@ -303,9 +304,9 @@ local lualine_theme = {
   replace  = base_style,
   command  = base_style,
   inactive = {
-    a = { fg = c.grey, bg = c.sub_bg },
-    b = { fg = c.grey, bg = c.sub_bg },
-    c = { fg = c.grey, bg = c.sub_bg },
+    a = { fg = c.grey, bg = c.bg },
+    b = { fg = c.grey, bg = c.bg },
+    c = { fg = c.grey, bg = c.bg },
   },
 }
 
