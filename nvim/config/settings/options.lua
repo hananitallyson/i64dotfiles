@@ -8,7 +8,7 @@ vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 0
 vim.opt.showcmd = false
 
 vim.opt.statuscolumn = "%s%=%{v:relnum == 0 ? v:lnum : v:relnum} "

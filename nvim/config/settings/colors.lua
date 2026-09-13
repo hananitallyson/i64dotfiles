@@ -37,6 +37,18 @@ local function hi(group, opts)
   vim.api.nvim_set_hl(0, group, opts)
 end
 
+hi("vimCommand",      { fg = c.fg })
+hi("vimAugroup",      { fg = c.fg })
+hi("vimAutoCmd",      { fg = c.fg })
+hi("vimOption",       { fg = c.fg })
+hi("vimMap",          { fg = c.fg })
+hi("vimLet",          { fg = c.fg })
+hi("vimFunc",         { fg = c.fg })
+hi("vimUserFunc",     { fg = c.fg })
+hi("Ex",              { fg = c.fg })
+hi("vimStatement",    { fg = c.fg })
+hi("vimCommand",      { fg = c.fg })
+
 hi("Normal",        { fg = c.fg })
 hi("NormalFloat",   { fg = c.fg })
 hi("NormalNC",      { fg = c.fg })
@@ -253,6 +265,19 @@ hi("TelescopeMultiIcon",      { fg = c.green, bg = c.bg })
 
 hi("TelescopePromptPrefix",   { fg = c.green, bg = c.bg })
 hi("TelescopePromptCounter",  { fg = c.white, bg = c.bg })
+
+hi("NoiceCmdlineText",         { fg = c.fg, bg = c.bg })
+hi("NoiceCmdlinePrompt",       { fg = c.green, bg = c.bg })
+hi("NoiceCmdlinePopup",        { fg = c.fg, bg = c.bg })
+hi("NoiceCmdlinePopupBorder",  { fg = c.grey, bg = c.bg })
+hi("NoiceCmdlineIcon",         { fg = c.green, bg = c.bg })
+hi("NoiceCmdlinePopupTitle",   { fg = c.green, bg = c.bg })
+
+hi("NoiceConfirm",     { fg = c.fg, bg = c.bg })
+hi("NoiceConfirmBorder", { fg = c.grey, bg = c.bg })
+
+hi("NoiceLspProgressTitle",    { fg = c.fg, bg = c.bg })
+hi("NoiceLspProgressClient",   { fg = c.fg, bg = c.bg })
 
 hi("NvimTreeNormal",       { fg = c.fg })
 hi("NvimTreeFolderIcon",   { fg = c.folder_green })
