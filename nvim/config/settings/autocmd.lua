@@ -22,3 +22,14 @@ vim.api.nvim_create_autocmd("VimLeave", {
   end,
 })
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.fn.system({ "kitten", "@", "set-font-size", "32" })
+  end,
+})
+
+vim.api.nvim_create_autocmd("VimLeave", {
+  callback = function()
+    vim.fn.system({ "kitten", "@", "set-font-size", "0" })
+  end,
+})
